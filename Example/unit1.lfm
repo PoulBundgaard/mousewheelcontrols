@@ -1,0 +1,45 @@
+object Form1: TForm1
+  Left = 478
+  Height = 166
+  Top = 276
+  Width = 209
+  Caption = 'Form1'
+  ClientHeight = 166
+  ClientWidth = 209
+  LCLVersion = '1.3'
+  object ScrollBox1: TScrollBox
+    Left = 0
+    Height = 166
+    Top = 0
+    Width = 209
+    HorzScrollBar.Page = 171
+    HorzScrollBar.Visible = False
+    VertScrollBar.Page = 145
+    Align = alClient
+    ClientHeight = 162
+    ClientWidth = 188
+    TabOrder = 0
+    OnMouseWheel = ScrollBox1MouseWheel
+    object Label1: TLabel
+      Left = 8
+      Height = 96
+      Top = 8
+      Width = 168
+      AutoSize = False
+      Caption = 'This is a standard TLabel control, without OnMouseEvent property... when the mouse wheel is used over this control the TScrollBox doesn''t scroll!'
+      ParentColor = False
+      WordWrap = True
+    end
+    object MouseWheelLabel1: TMouseWheelLabel
+      Left = 8
+      Height = 88
+      Top = 112
+      Width = 176
+      AutoSize = False
+      Caption = 'This is a TMouseWheelLabel control that let you manage OnMouseWheel events and pass corresponding action to the TScrollBox component.'
+      ParentColor = False
+      WordWrap = True
+      OnMouseWheel = ScrollBox1MouseWheel
+    end
+  end
+end
